@@ -1,4 +1,5 @@
 import { type Resource, Resources } from '@/components/Resources';
+import { Button } from '@/components/ui/button';
 
 const resources: Resource[] = [
   {
@@ -48,6 +49,13 @@ export default function Home() {
         <h1 className="font-bold text-6xl font-mono">Next.js</h1>
       </div>
 
+      <Button
+        className="px-10 py-5 cursor-pointer"
+        size="icon"
+        variant="outline"
+      >
+        <span className="i-ant-design:edit-outlined h-4 w-4" /> Start
+      </Button>
       <Resources resources={resources} />
     </main>
   );

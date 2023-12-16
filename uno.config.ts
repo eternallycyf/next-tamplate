@@ -8,9 +8,16 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss';
+import type { Theme } from 'unocss/preset-mini';
+import { presetShadcn } from './preset.shadcn';
 
 export default defineConfig({
-  shortcuts: [],
+  shortcuts: [
+    {
+      'flex-center': 'flex justify-center items-center',
+      'flex-col-center': 'flex flex-col justify-center items-center',
+    },
+  ],
   theme: {
     colors: {},
     fontFamily: {
@@ -32,6 +39,7 @@ export default defineConfig({
     }),
     presetTypography(),
     presetWebFonts({}),
+    presetShadcn(),
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   rules: [
