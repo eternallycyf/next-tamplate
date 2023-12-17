@@ -20,6 +20,7 @@
     "ahooks": "^3.7.8",
     "antd": "^5.12.2",
     "class-variance-authority": "^0.7.0",
+    "classnames": "^2.3.2",
     "clsx": "^2.0.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.297.0",
