@@ -1,12 +1,18 @@
-'use client';
 import { Alert, Button, ConfigProvider, Typography, Input } from 'antd';
 import ThemeConfig from '@/theme/themeConfig';
 import locale from 'antd/locale/zh_CN';
-import Demo from '@/components/demo/index';
 import Link from 'next/link';
 import HelloWorld from './hello-world/page.mdx';
+import { getLocale } from '@/locale/utils';
+import { Locale } from '@/i18n-config';
+import LocaleSwitcher from './components/locale-switcher';
 
-export default function Home() {
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const localLocale = await getLocale(lang);
   return (
     <section>
       <div id="root">
@@ -17,7 +23,8 @@ export default function Home() {
         >
           <HelloWorld />
           <Link href="/proxy">proxy</Link>
-          <Demo />
+          <LocaleSwitcher />
+          {localLocale['server-component'].welcome}
         </ConfigProvider>
       </div>
     </section>

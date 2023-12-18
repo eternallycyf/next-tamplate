@@ -2,6 +2,11 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import StyledComponentsRegistry from '@/lib/AntdRegistry';
 import '@/styles/globals.css';
+import { i18n } from '@/i18n-config';
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,11 +17,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: {
+    lang: (typeof i18n)['locales'][number];
+  };
 }) {
   return (
-    <html lang="en">
+    <html lang={params.lang}>
       <body className={inter.className}>
         <StyledComponentsRegistry>
           <main>{children}</main>

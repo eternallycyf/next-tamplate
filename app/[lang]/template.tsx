@@ -1,4 +1,4 @@
-import Loading from '@/app/loading';
+import Loading from '@/app/[lang]/loading';
 import React from 'react';
 
 export default function Template({ children }: { children: React.ReactNode }) {
