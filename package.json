@@ -32,7 +32,9 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.158",
+    "@next/mdx": "^14.0.4",
     "@types/lodash": "^4.14.202",
+    "@types/mdx": "^2.0.10",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
