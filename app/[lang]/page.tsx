@@ -6,6 +6,8 @@ import HelloWorld from './hello-world/page.mdx';
 import { getLocale } from '@/locale/utils';
 import { Locale } from '@/i18n-config';
 import LocaleSwitcher from './_components/locale-switcher';
+import variables from '@/styles/variables.module.scss';
+import type { Route } from 'next';
 
 export default async function Home({
   params: { lang },
@@ -22,9 +24,10 @@ export default async function Home({
           theme={ThemeConfig}
         >
           <HelloWorld />
-          <Link href="/proxy">proxy</Link>
+          <Link href={'/proxy' as Route}>proxy</Link>
           <LocaleSwitcher />
           {localLocale['server-component'].welcome}
+          <h1 style={{ color: variables.colorPrimary }}>Hello, scss!</h1>
         </ConfigProvider>
       </div>
     </section>

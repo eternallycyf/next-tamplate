@@ -2,7 +2,6 @@ import type { ThemeConfig } from 'antd';
 
 const theme: ThemeConfig = {
   token: {
-    // fontFamily: `OperatorMono, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'`,
     colorPrimary: '#2b5fdc',
     colorError: '#e62c3b',
     colorInfo: '#2b5fdc',
