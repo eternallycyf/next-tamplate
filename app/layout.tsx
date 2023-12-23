@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import StyledComponentsRegistry from '@/lib/AntdRegistry';
 import '@/styles/globals.css';
 import { i18n } from '@/i18n-config';
+import StoreProvider from '@/model/StoreProvider';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -27,9 +28,11 @@ export default function RootLayout({
   return (
     <html lang={params.lang}>
       <body className={inter.className}>
-        <StyledComponentsRegistry>
-          <main>{children}</main>
-        </StyledComponentsRegistry>
+        <main>
+          <StyledComponentsRegistry>
+            <StoreProvider>{children}</StoreProvider>
+          </StyledComponentsRegistry>
+        </main>
       </body>
     </html>
   );
