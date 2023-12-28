@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ims-view/page-loading": "latest",
     "@ant-design/cssinjs": "^1.18.1",
     "@ant-design/icons": "^5.2.6",
     "@formatjs/intl-localematcher": "^0.5.2",
@@ -31,7 +32,8 @@
     "react-dom": "^18",
     "server-only": "^0.0.1",
     "tailwind-merge": "^2.1.0",
-    "zustand": "^4.4.7"
+    "zustand": "^4.4.7",
+    "swr": "^2.2.4"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.158",
