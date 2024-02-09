@@ -5,7 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "针对 localhost 启动 Chrome",
+      "name": "后端",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev"
+    },
+    {
+      "name": "前端",
       "type": "chrome",
       "request": "attach",
       "port": 9222,
